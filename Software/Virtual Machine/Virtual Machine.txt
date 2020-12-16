@@ -1,0 +1,1 @@
+This folder will contain the virtual machines used for the project.
