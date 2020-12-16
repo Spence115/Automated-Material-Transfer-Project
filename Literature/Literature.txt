@@ -1,0 +1,4 @@
+This folder is the main folder for the corresponding folders: 
+- Articles
+- Patents
+- Books
