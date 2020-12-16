@@ -1,2 +1,0 @@
-if hello is hello
-print hello
