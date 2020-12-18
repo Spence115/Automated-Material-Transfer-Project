@@ -1,7 +1,8 @@
-<div align="center"> <h1> Automated Material Transfer </h1> 
-<br/><br/>
+<div align="center"> <h1> Automated Material Transfer </h1> <br/>
+ Stewart Lamon <br/> Yardley Ordonez <br/> Zahory Ramirez <br/> Nolan Spencer <br/> 
 <img src = "PR/Pictures/Chico emblem.jpg" height = "360px" style="margin:10px 10px"> <br/>
-Stewart Lamon <br/> Yardley Ordonez <br/> Zahory Ramirez <br/> Nolan Spencer <br/> Fall 2020 </div> <br/>
+MECA 470 <br/> Fall 2020 <br/>
+</div> <br/>
 
 ## Introduction <br/>
 The objective of this project was to simulate an Unmanned Ground Vehicle (UGV) that would be able to transfer material to different set of locations. To complete this simulation, Robot Operating System (ROS) Kinetic was utilized as the base environment for simulating an autonomous UGV. This group chose to emulate Clearpath Robotics' 
