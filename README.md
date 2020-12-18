@@ -9,11 +9,11 @@ The objective of this project was to simulate an autonomous unmanned ground vehi
 and their 
 <a href="http://www.clearpathrobotics.com/assets/guides/melodic/warthog/">online tutorials</a>. 
 There were other software toolkits that were utilised for this project, and there willl be further explanation of these toolkits.
-<br/>
-<br/>
+<br/><br/>
 <div align="center">
 <img src = "PR/Pictures/Warthog picture.jpg" height = "360px" style="margin:10px 10px"> 
 <br/>
 <b>Figure 1: Warthug UGV </b>  
 </div>
+<br/><br/>
 
