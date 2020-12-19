@@ -74,5 +74,4 @@ Once Ubuntu 16.04 LTS is successfully configured into the vitual environment, th
 
 ```Python
 print("yo momma smell bad on sundays")
-
 ```
