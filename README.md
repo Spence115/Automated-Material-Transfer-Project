@@ -54,7 +54,7 @@ Below there will be a of list of the software empoyed for this project with thei
 The installation process will be discussed in this section for informing the reader with some background. <br/><br/>
 
 <i>1. Virtual Machine and Ubuntu Install</i><br/>
-Since the host operating system (OS) is windows, a linux os was needed to employ ROS. This team planned to use the Kinetic Kame ROS distribution.  
+Since the host operating system (OS) for computers utilised were windows, a linux os was needed to employ ROS. This team planned to use the Kinetic Kame ROS distribution. The first step was to download the Oracle Virtualbox for free and install onto respective computers. The next step was to download and install Ubuntu 16.04 LTS to use in the Virtualbox environment. 
 <br/><br/>
 
 <i>2. Kinetic Kame ROS Distro Install</i><br/>
