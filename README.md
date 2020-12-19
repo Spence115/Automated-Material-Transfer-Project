@@ -50,4 +50,7 @@ Below there will be a of list of the software empoyed for this project with thei
  
 </ul>
 
-## Next Section (need to think of appropriate topic/name) 
+## Installation
+The installation process will be discussed in this section for informing the reader with some background. <br/><br/>
+<i>1. Virtual Machine Install</i><br/><br/>
+Since the host operating system (OS) is windows, a linux os was needed to employ ROS. This team planned to use the Kinetic Kame ROS distribution.  
