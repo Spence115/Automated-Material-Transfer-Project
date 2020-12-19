@@ -65,4 +65,7 @@ Since the host operating system (OS) for computers utilised were windows, a linu
 
 <i>2. Kinetic Kame ROS Distro Install</i><br/><br/>
 
-
+<div align="center">
+<img src = "PR/Pictures/kinetic kame.png" height = "360px" style="margin:10px 10px">
+<br/><br/>
+</div> 
