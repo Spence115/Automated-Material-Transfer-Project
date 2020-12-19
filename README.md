@@ -71,6 +71,11 @@ Since the host operating system (OS) for computers utilised were windows, a linu
 </div> 
 
 Once Ubuntu 16.04 LTS is successfully configured into the vitual environment, the next step was to install Kintec Kame ROS distribution. For detailed steps on how to download Kinetic Kame ROS distribution on Ubuntu 16.04 LTS, please refer to the <a href="http://wiki.ros.org/kinetic/Installation/Ubuntu">ROS Kinetic installation guide</a>.
+<br/><br/>
+
+<i>3. Installing Warthog Software</i><br/><br/>
+
+
 
 ```Python
 print("this is python code")
