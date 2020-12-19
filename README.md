@@ -1,5 +1,5 @@
 <div align="center"> <h1> Automated Material Transfer </h1> <br/>
- Stewart Lamon <br/> Yardley Ordonez <br/> Zahory Ramirez <br/> Nolan Spencer <br/> 
+ Stewart Lamon <br/> Yardley Ordonez <br/> Zahory Ramirez <br/> Nolan Spencer <br/><br/>
 <img src = "PR/Pictures/Chico emblem.jpg" height = "360px" style="margin:10px 10px"> <br/>
 MECA 470 <br/> Fall 2020 <br/>
 </div> <br/>
