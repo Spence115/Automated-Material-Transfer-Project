@@ -30,7 +30,7 @@ Below there will be a of list the software empoyed for this project with their r
  
  <li>Linux Operating System</li>
  <ul>
- <li><a href:"https://releases.ubuntu.com/16.04/">Ubuntu 16.04 LTS</a></li> 
+ <li><a href="https://releases.ubuntu.com/16.04/">Ubuntu 16.04 LTS</a></li> 
  </ul> <br/>
  
  <li>ROS Distribution</li>
@@ -40,7 +40,7 @@ Below there will be a of list the software empoyed for this project with their r
  
  <li>3D Simulator</li>
  <ul>
-  <li>Gazebo</li>
+ <li><a href="http://gazebosim.org/tutorials/?tut=ros_comm">Gazebo</a></li>
  </ul><br/>
  
  <li>3D Visualization Tool</li>
