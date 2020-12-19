@@ -69,3 +69,5 @@ Since the host operating system (OS) for computers utilised were windows, a linu
 <img src = "PR/Pictures/kinetic kame.png" height = "360px" style="margin:10px 10px">
 <br/><br/>
 </div> 
+
+Once Ubuntu 16.04 LTS is successfully configured into the vitual environment, the next step was to install Kintec Kame ROS distribution by using the terminal.
