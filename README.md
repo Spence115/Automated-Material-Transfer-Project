@@ -73,5 +73,5 @@ Since the host operating system (OS) for computers utilised were windows, a linu
 Once Ubuntu 16.04 LTS is successfully configured into the vitual environment, the next step was to install Kintec Kame ROS distribution by using the terminal. 
 
 ```Python
-print("yo momma smell bad on sundays")
+print("code can go here")
 ```
