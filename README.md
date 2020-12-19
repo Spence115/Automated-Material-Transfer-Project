@@ -56,7 +56,7 @@ The installation process will be discussed in this section for informing the rea
 <i>1. Virtual Machine and Ubuntu Install</i><br/><br/>
 
 <div align="center">
-<img src = "PR/Pictures/Virtualbox Setup.jpg" height = "360px" style="margin:10px 10px"> 
+<img src = "PR/Pictures/Virtualbox Setup.Jpg" height = "360px" style="margin:10px 10px"> 
 <br/><br/>  
 </div>
 
