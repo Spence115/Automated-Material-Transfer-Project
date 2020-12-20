@@ -91,5 +91,11 @@ If Ros Kinetic is not installed then refer back to the <a href="http://wiki.ros.
 Once the ROS environment is setup, the next step is to install the Warthog through Clearpath Robotic's<a href="https://www.clearpathrobotics.com/assets/guides/kinetic/warthog/WarthogInstallation.html">Warthog software installation guide</a>.
 <br/><br/>
 
-<code style="color:red">This is red?</code>
 
+<pre><code>
+p { color:red;}
+This is red?
+</code>
+</pre
+
+`<font color='red'>jack's_Squad</font>`
