@@ -129,10 +129,10 @@ Now that there is an understanding of how the node works, there will be further 
 ```
 roslaunch warthog_gazebo warthog_world.launch
 ```
-<br/>It is important to note that one can use any custom world launch file that of preference, but for this example one of Clearpath Robotics’ basic worlds will be utilized. If there is an interest to simulating in the custom world that was created, run the following command:<br/>
+<br/>It is important to note that any custom world launch file can be used. The launch file above is one provided by Clearpath Robotics’ and is already installed in the Warthog’s workspace. However, a custom world made by the group was used for the screenshots featured later on. To simulate in the custom world, be sure to install the launch file and world file located <a href="https://github.com/yardbear/MECA-470-Automated-Material-Transfer-Project/tree/master/Software/Code/Custom%20world%20files">here</a>.<br/> and run the following command:<br/>
 
 ```
-insert code here later
+roslaunch warthog_gazebo MECA_470.launch
 ```
 <br/>If Gazebo has launched properly, there should be a window similar to the following:<br/><br/>
 
