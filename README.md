@@ -139,6 +139,7 @@ roslaunch warthog_gazebo MECA_470.launch
 <div align="center">
 <img src = "PR/Pictures/Gazebo_snip.png" height = "360px" style="margin:10px 10px"> 
 <br/><br/>  
+</div>
 
 To launch the publisher node, open up a second terminal and enter this line:<br/>
 
