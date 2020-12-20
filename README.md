@@ -78,7 +78,9 @@ Once ROS Kinetic is installed, verify that ros is installed by opening a new ter
 printenv | grep ROS
 ```
 <br/>
-If Ros Kinetic is not installed 
+If Ros Kinetic is not installed then refer back to the <a href="http://wiki.ros.org/kinetic/Installation/Ubuntu">ROS Kinetic installation guide</a> again or check other online resources related to installing ROS Kinetic such as the <a href="http://wiki.ros.org/">ROS Wiki</a>. If installed properly then proceed to <a href="http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment">configuring the ROS environment</a>.
+<br/><br/>
+
 <i>3. Installing Warthog Software</i><br/><br/>
 
 <div align="center">
