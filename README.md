@@ -73,7 +73,7 @@ Since the host operating system (OS) for computers utilised were windows, a linu
 Once Ubuntu 16.04 LTS is successfully configured into the vitual environment, the next step was to install Kintec Kame ROS distribution. For detailed steps on how to download Kinetic Kame ROS distribution on Ubuntu 16.04 LTS, please refer to the <a href="http://wiki.ros.org/kinetic/Installation/Ubuntu">ROS Kinetic installation guide</a>.
 <br/><br/>
 
-Once ROS Kinetic is installed, verify that ros is installed by opening a new terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>: to open terminal in ubuntu) and typing in the following:<br/>
+Once ROS Kinetic is installed, verify that ros is installed by opening a new terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd> : to open terminal in ubuntu) and typing in the following:<br/>
 ```
 printenv | grep ROS
 ```
