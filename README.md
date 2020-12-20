@@ -88,7 +88,10 @@ If Ros Kinetic is not installed then refer back to the <a href="http://wiki.ros.
 <br/><br/>
 </div> 
 
+Once the ROS environment is setup, the next step is to install the 
+<br/><br/>
 
+<code> YES YES </code>
 
 ```Python
 print("this is python code")
