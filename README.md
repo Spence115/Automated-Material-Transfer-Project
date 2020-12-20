@@ -88,14 +88,12 @@ If Ros Kinetic is not installed then refer back to the <a href="http://wiki.ros.
 <br/><br/>
 </div> 
 
-Once the ROS environment is setup, the next step is to install the Warthog through Clearpath Robotic's<a href="https://www.clearpathrobotics.com/assets/guides/kinetic/warthog/WarthogInstallation.html">Warthog software installation guide</a>.
+Once the ROS environment is setup, the next step is to install the Warthog through Clearpath Robotic's<a href="https://www.clearpathrobotics.com/assets/guides/kinetic/warthog/WarthogInstallation.html">Warthog software installation guide</a>. It is reccommended to only stop after completing the <a href="https://www.clearpathrobotics.com/assets/guides/kinetic/warthog/WarthogSimulation.html"> Launch RVIZ</a> section.
 <br/><br/>
 
+<i>4. Istalling Warthog_publisher </i><br/><br/>
 
-<pre><code>
-p { color:red;}
-This is red?
-</code>
-</pre
-
-`<font color='red'>jack's_Squad</font>`
+Now that the Warthog’s workspace is successfully installed on the virtual machine, it is time to add the built workspace. This package allows for the user to set specific x and y-coordinate waypoints on Gazebo's map and it will also command the Warthog to navigate to each of the listed points in order. Start by opening a new terminal window and changing the directory on the terminal by typing in the following: <br/>
+```
+cd ~/warthog_ws/src
+```
