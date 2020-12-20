@@ -93,7 +93,7 @@ Once the ROS environment is setup, the next step is to install the Warthog throu
 
 <i>4. Istalling Warthog_publisher </i><br/><br/>
 
-Now that the Warthog’s workspace is successfully installed on the virtual machine, it is time to add the built workspace. This package allows for the user to set specific x and y-coordinate waypoints on Gazebo's map and it will also command the Warthog to navigate to each of the listed points in order. Start by opening a new terminal window and changing the directory on the terminal by typing in the following: <br/>
+Now that the Warthog’s workspace is successfully installed on the virtual machine, it is time to add the `warthog_publisher` to the Warthog workspace. This package allows for the user to set specific x and y-coordinate waypoints on Gazebo's map and it will also command the Warthog to navigate to each of the listed points in order. Start by opening a new terminal window and changing the directory on the terminal by typing in the following: <br/>
 
 ```
 cd ~/warthog_ws/src
@@ -103,4 +103,46 @@ cd ~/warthog_ws/src
 ```
 git clone https://github.com/Spence115/warthog_publisher.git
 ```
+<br/>Then change directory to the worspace and build:<br/>
+
+```
+cd ~/warthog_ws
+catkin_make
+```
+
+<br/>Finally, be sure to source the worspace in order to use the packages that were just built: <br/>
+
+```
+source devel/setup.bash
+```
+<br/><br/>
+
+## Application
+At this point, it is time to simulate with the way point publisher. There will be detailed steps on how to use this package and describe what is going on behind the scenes. <br/>
+
+The core of the `warthog_publisher` package is the `warthog_publisher_node.cpp` file. To determine the position of the Warthog, the `warthog_publisher_node` subscribes to the `gazebo/model_states` topic with the message type ` gazebo_msgs/ModelStates`. To find each coordinate, the node extracts the x and y coordinates from the "point" position inside of the `geometry_msgs/Pose[]` array. For more information on the structure of theses topics visit <a href="http://docs.ros.org/en/jade/api/gazebo_msgs/html/msg/ModelStates.html">this website</a>.<br/>
+
+After determining the Warthog’s position, the node changes the robot’s linear velocity and yaw by publishing to the `/cmd_vel` topic with the message type `geometry_msgs/Twist`. To move the robot to the desired position inside Gazebo. The node will continue publishing and will move the Warthog until it reaches a position that is within +/- 0.2 meters of the designated waypoint. Once it reaches the first waypoint, it will continue to navigate to each subsequent waypoint until it reaches the final waypoint written in the `warthog_publisher_node.cpp` file.<br/>
+
+Now thattheir is an understanding of how the node works, there will be further discussion on how to use the node. First, open up a new terminal and enter the following: <br/>
+
+```
+roslaunch warthog_gazebo warthog_world.launch
+```
+<br/>It is important to note that one can use any custom world launch file that of preference, but for this example one of Clearpath Robotics’ basic worlds will be utilised. If there is an interest to simulating in the custom world that was created, run the following command:<br/>
+
+```
+insert code here later
+```
+<br/>If Gazebo has launched properly, there should be a window similar to the following:<br/><br/>
+
+insert picture here
+<br/><br/>
+
+To launch the publisher node, open up a second terminal and enter this line:<br/>
+
+```
+rosrun warthog_publisher warthog_publisher_node
+```
+<br/>to verify that the node is operating correctly, the Warthog begins travelling to each waypoint and the terminal windows look similar to the ones below:
 
