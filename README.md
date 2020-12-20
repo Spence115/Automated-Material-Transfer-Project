@@ -88,7 +88,7 @@ If ROS Kinetic is not installed then refer back to the <a href="http://wiki.ros.
 <br/><br/>
 </div> 
 
-Once the ROS environment is setup, the next step is to install the Warthog through Clearpath Robotics’<a href="https://www.clearpathrobotics.com/assets/guides/kinetic/warthog/WarthogInstallation.html">Warthog software installation guide</a>. It is recommended to only stop after completing the <a href="https://www.clearpathrobotics.com/assets/guides/kinetic/warthog/WarthogSimulation.html"> Launch RVIZ</a> section.
+Once the ROS environment is setup, the next step is to install the Warthog through Clearpath Robotics’ <a href="https://www.clearpathrobotics.com/assets/guides/kinetic/warthog/WarthogInstallation.html">Warthog software installation guide</a>. It is recommended to only stop after completing the <a href="https://www.clearpathrobotics.com/assets/guides/kinetic/warthog/WarthogSimulation.html"> Launch RVIZ</a> section.
 <br/><br/>
 
 <i>4. Istalling Warthog_publisher </i><br/><br/>
