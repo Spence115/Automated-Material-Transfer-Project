@@ -6,7 +6,7 @@ MECA 470 <br/> Fall 2020 <br/>
 
 ## Introduction 
 The objective of this project was to simulate an Unmanned Ground Vehicle (UGV) that would be able to transfer material to different set of locations. To complete this simulation, Robot Operating System (ROS) Kinetic was utilized as the base environment for simulating an autonomous UGV. This group chose to emulate Clearpath Robotics' 
-<a href="https://clearpathrobotics.com/warthog-unmanned-ground-vehicle-robot/">Warthog UGV</a> 
+<a href="https://clearpathrobotics.com/warthog-unmanned-ground-vehicle-robot/"> Warthog UGV</a> 
 and their 
 <a href="http://www.clearpathrobotics.com/assets/guides/melodic/warthog/">online tutorials</a>. 
 There were other software toolkits that were utilized for this project, and there will be further explanation of these toolkits.
