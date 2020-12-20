@@ -118,7 +118,7 @@ source devel/setup.bash
 <br/><br/>
 
 ## Application
-At this point, it is time to simulate with the way point publisher. There will be detailed steps on how to use this package and describe what is going on behind the scenes. <br/>
+At this point, it is time to simulate with the waypoint publisher. There will be detailed steps on how to use this package and describe what is going on behind the scenes. <br/>
 
 The core of the `warthog_publisher` package is the `warthog_publisher_node.cpp` file. To determine the position of the Warthog, the `warthog_publisher_node` subscribes to the `gazebo/model_states` topic with the message type ` gazebo_msgs/ModelStates`. To find each coordinate, the node extracts the x and y coordinates from the "point" position inside of the `geometry_msgs/Pose[]` array. For more information on the structure of these topics visit <a href="http://docs.ros.org/en/jade/api/gazebo_msgs/html/msg/ModelStates.html">this website</a>.<br/>
 
@@ -136,8 +136,9 @@ roslaunch warthog_gazebo MECA_470.launch
 ```
 <br/>If Gazebo has launched properly, there should be a window similar to the following:<br/><br/>
 
-insert picture here
-<br/><br/>
+<div align="center">
+<img src = "PR/Pictures/Gazebo_snip.png" height = "360px" style="margin:10px 10px"> 
+<br/><br/>  
 
 To launch the publisher node, open up a second terminal and enter this line:<br/>
 
