@@ -94,6 +94,13 @@ Once the ROS environment is setup, the next step is to install the Warthog throu
 <i>4. Istalling Warthog_publisher </i><br/><br/>
 
 Now that the Warthog’s workspace is successfully installed on the virtual machine, it is time to add the built workspace. This package allows for the user to set specific x and y-coordinate waypoints on Gazebo's map and it will also command the Warthog to navigate to each of the listed points in order. Start by opening a new terminal window and changing the directory on the terminal by typing in the following: <br/>
+
 ```
 cd ~/warthog_ws/src
 ```
+<br/> Start cloning the node's repository by utllizing git:<br/>
+
+```
+git clone https://github.com/Spence115/warthog_publisher.git
+```
+
