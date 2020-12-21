@@ -153,8 +153,14 @@ rosrun warthog_publisher warthog_publisher_node
 <br/><br/>  
 </div>
 
-Below is a video of the simulation, this croup was trying to accomplish: 
+The example above shows how the Warthog will navigate to the preset map coordinates chosen by the team. However, the user can add and change any amount of additional waypoints to the node by editing line XX and XX of the warthog_publisher_node.cpp file located at /home/{your_user_name}/warthog_ws/src/warthog_publisher/src. 
 
+<div align="center">
+<img src = "PR/Pictures/Coordinate Snip.png" height = "360px" style="margin:10px 10px"> 
+<br/><br/>  
+</div>
+
+Below is a video of the simulation, this group was trying to accomplish: 
 
 [![Fall 2020 MECA 470 Gazebo Simulation](http://img.youtube.com/vi/mwTm3SYaEWY/0.jpg)](https://www.youtube.com/watch?v=mwTm3SYaEWY&feature=youtu.be&ab_channel=NolanSpencer "Fall 2020 MECA 470 Gazebo Simulation")
 
