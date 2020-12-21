@@ -101,7 +101,7 @@ cd ~/warthog_ws/src
 <br/> Start cloning the node's repository by utilizing git:<br/>
 
 ```
-git clone https://github.com/yardbear/MECA-470-Automated-Material-Transfer-Project/warthog_publisher.git
+git clone https://github.com/Spence115/warthog_publisher.git
 ```
 <br/>Then change directory to the workspace and build:<br/>
 
