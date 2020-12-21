@@ -155,6 +155,4 @@ rosrun warthog_publisher warthog_publisher_node
 
 ##### more info to come
 
-<iframe width="420" height="315"
-src="https://www.youtube.com/embed/tgbNymZ7vqY" >
-</iframe>
+[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=VID)
