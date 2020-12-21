@@ -98,7 +98,7 @@ Now that the Warthog’s workspace is successfully installed on the virtual mach
 ```
 cd ~/warthog_ws/src
 ```
-<br/> Start cloning the node's repository by utilizing git:<br/>
+<br/> Clone the node's repository by utilizing git:<br/>
 
 ```
 git clone https://github.com/Spence115/warthog_publisher.git
