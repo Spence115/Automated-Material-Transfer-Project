@@ -153,8 +153,7 @@ rosrun warthog_publisher warthog_publisher_node
 <br/><br/>  
 </div>
 
-##### more info to come
+Below is a video of the simulation, this croup was trying to accomplish: 
 
-[![Audi R8](http://img.youtube.com/vi/KOxbO0EI4MA/0.jpg)](https://www.youtube.com/watch?v=KOxbO0EI4MA "Audi R8")
+[![Fall 2020 MECA 470 Gazebo Simulation](http://img.youtube.com/vi/mwTm3SYaEWY/0.jpg)](https://www.youtube.com/watch?v=mwTm3SYaEWY&feature=youtu.be&ab_channel=NolanSpencer "Fall 2020 MECA 470 Gazebo Simulation")
 
-https://www.youtube.com/watch?v=mwTm3SYaEWY&feature=youtu.be&ab_channel=NolanSpencer
