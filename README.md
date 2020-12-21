@@ -17,7 +17,7 @@ There were other software toolkits that were utilized for this project, and ther
 <br/><br/>  
 </div>
 
-Clearpath Robotics’ Warthog UGV was chosen due to its many features that would allow for it to be utilized in moderate weather conditions, max payload of 600 lbs and towing capacity of 1984 lbs. Another aspect that caught the attention of this group, was that it uses a 64-bit version of Ubuntu 16.04 or 18.04 LTS. The Warthog's onboard computer comes with ROS kinetic or melodic distribution pre-installed and configured.
+Clearpath Robotics’ Warthog UGV was chosen due to its many features that would allow for it to be utilized in moderate weather conditions, max payload of 600 lbs and towing capacity of 1984 lbs. Another aspect that caught the attention of this group was that it uses a 64-bit version of Ubuntu 16.04 or 18.04 LTS. The Warthog's onboard computer comes with ROS kinetic or melodic distribution pre-installed and configured.
 
 ## Software 
 Below is a list of the software employed for this project with their respective links for downloading or acquiring more information: <br/>
