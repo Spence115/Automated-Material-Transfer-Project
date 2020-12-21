@@ -5,7 +5,7 @@ MECA 470 <br/> Fall 2020 <br/>
 </div> <br/>
 
 ## Introduction 
-The objective of this project was to simulate an Unmanned Ground Vehicle (UGV) that would be able to transfer material to different set of locations. To complete this simulation, Robot Operating System (ROS) Kinetic was utilized as the base environment for simulating an autonomous UGV. This group chose to emulate Clearpath Robotics' 
+The objective of this project was to simulate an Unmanned Ground Vehicle (UGV) that would be able to transfer material to different sets of locations. To complete this simulation, Robot Operating System (ROS) Kinetic was utilized as the base environment for simulating an autonomous UGV. This group chose to emulate Clearpath Robotics' 
 <a href="https://clearpathrobotics.com/warthog-unmanned-ground-vehicle-robot/"> Warthog UGV</a> 
 and their 
 <a href="http://www.clearpathrobotics.com/assets/guides/melodic/warthog/">online tutorials</a>. 
@@ -17,7 +17,7 @@ There were other software toolkits that were utilized for this project, and ther
 <br/><br/>  
 </div>
 
-Clearpath Robotics’ Warthog UGV was chosen due to its many features that would allow for it to be utilized in moderate weather conditions, max payload of 600 lbs and towing capacity of 1984 lbs. Another aspect that caught the attention of this group, was that it uses a 64-bit version of Ubuntu 16.04 or 18.04 LTS. The Warthog's onboard computer comes with ROS kinetic or melodic distribution preinstalled and configured.
+Clearpath Robotics’ Warthog UGV was chosen due to its many features that would allow for it to be utilized in moderate weather conditions, max payload of 600 lbs and towing capacity of 1984 lbs. Another aspect that caught the attention of this group, was that it uses a 64-bit version of Ubuntu 16.04 or 18.04 LTS. The Warthog's onboard computer comes with ROS kinetic or melodic distribution pre-installed and configured.
 
 ## Software 
 Below is a list of the software employed for this project with their respective links for downloading or acquiring more information: <br/>
@@ -91,9 +91,9 @@ If ROS Kinetic is not installed then refer back to the <a href="http://wiki.ros.
 Once the ROS environment is setup, the next step is to install the Warthog through Clearpath Robotics’ <a href="https://www.clearpathrobotics.com/assets/guides/kinetic/warthog/WarthogInstallation.html">Warthog software installation guide</a>. It is recommended to only stop after completing the <a href="https://www.clearpathrobotics.com/assets/guides/kinetic/warthog/WarthogSimulation.html"> Launch RVIZ</a> section.
 <br/><br/>
 
-<i>4. Istalling Warthog_publisher </i><br/><br/>
+<i>4. Installing Warthog_publisher </i><br/><br/>
 
-Now that the Warthog’s workspace is successfully installed on the virtual machine, it is time to add the `warthog_publisher` to the Warthog workspace. This package allows for the user to set specific x and y-coordinate waypoints on Gazebo's map and will also command the Warthog to navigate to each of the listed points in order. Start by opening a new terminal window and changing the directory on the terminal by typing in the following: <br/>
+Now that the Warthog’s workspace is successfully installed on the virtual machine, it is time to add the `warthog_publisher` to the Warthog workspace. This package allows for the user to set specific x and y-coordinate waypoints on the Gazebo map and will also command the Warthog to navigate to each of the listed points in order. Start by opening a new terminal window and changing the directory on the terminal by typing in the following: <br/>
 
 ```
 cd ~/warthog_ws/src
@@ -153,7 +153,7 @@ rosrun warthog_publisher warthog_publisher_node
 <br/><br/>  
 </div>
 
-The example above shows how the Warthog will navigate to the preset map coordinates chosen by the team. However, the user can add or change any amount of additional waypoints to the node by editing lines 120 and 121 of the warthog_publisher_node.cpp file located at /home/{your_user_name}/warthog_ws/src/warthog_publisher/src. In the screenshot below, the highlighted lines reveal which portion of the code needs to be edited to add coordinates. 
+The example above shows how the Warthog will navigate to the preset map coordinates chosen by the team. However, the user can add or change any amount of additional waypoints to the node by editing lines 120 and 121 of the `warthog_publisher_node.cpp` file located at `/home/{your_user_name}/warthog_ws/src/warthog_publisher/src`. In the screenshot below, the highlighted lines reveal which portion of the code needs to be edited to add coordinates. 
 
 <div align="center">
 <img src = "PR/Pictures/Coordinate Snip.png" height = "180px" style="margin:10px 10px"> 
