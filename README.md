@@ -149,7 +149,7 @@ rosrun warthog_publisher warthog_publisher_node
 <br/>To verify that the node is operating correctly, the Warthog begins travelling to each waypoint and the terminal windows look similar to the ones below:
 
 <div align="center">
-<img src = "PR/Pictures/Terminal picture.png" height = "360px" style="margin:10px 10px"> 
+<img src = "PR/Pictures/Terminal Snip.png" height = "360px" style="margin:10px 10px"> 
 <br/><br/>  
 </div>
 
