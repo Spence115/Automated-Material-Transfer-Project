@@ -155,5 +155,6 @@ rosrun warthog_publisher warthog_publisher_node
 
 Below is a video of the simulation, this croup was trying to accomplish: 
 
+
 [![Fall 2020 MECA 470 Gazebo Simulation](http://img.youtube.com/vi/mwTm3SYaEWY/0.jpg)](https://www.youtube.com/watch?v=mwTm3SYaEWY&feature=youtu.be&ab_channel=NolanSpencer "Fall 2020 MECA 470 Gazebo Simulation")
 
