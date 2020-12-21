@@ -149,14 +149,14 @@ rosrun warthog_publisher warthog_publisher_node
 <br/>To verify that the node is operating correctly, the Warthog begins travelling to each waypoint and the terminal windows look similar to the ones below:
 
 <div align="center">
-<img src = "PR/Pictures/Terminal Snip.png" height = "90px" style="margin:10px 10px"> 
+<img src = "PR/Pictures/Terminal Snip.png" height = "480px" style="margin:10px 10px"> 
 <br/><br/>  
 </div>
 
 The example above shows how the Warthog will navigate to the preset map coordinates chosen by the team. However, the user can add or change any amount of additional waypoints to the node by editing lines 120 and 121 of the warthog_publisher_node.cpp file located at /home/{your_user_name}/warthog_ws/src/warthog_publisher/src. In the screenshot below, the highlighted lines reveal which portion of the code needs to be edited to add coordinates. 
 
 <div align="center">
-<img src = "PR/Pictures/Coordinate Snip.png" height = "480px" style="margin:10px 10px"> 
+<img src = "PR/Pictures/Coordinate Snip.png" height = "180px" style="margin:10px 10px"> 
 <br/><br/>  
 </div>
 
