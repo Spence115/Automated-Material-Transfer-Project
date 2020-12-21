@@ -154,6 +154,7 @@ rosrun warthog_publisher warthog_publisher_node
 </div>
 
 ##### more info to come
+
 <iframe width="420" height="315"
-src="https://www.youtube.com/embed/tgbNymZ7vqY">
+src="https://www.youtube.com/embed/tgbNymZ7vqY" >
 </iframe>
