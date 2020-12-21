@@ -110,7 +110,7 @@ cd ~/warthog_ws
 catkin_make
 ```
 
-<br/>Finally, be sure to source the worspace in order to use the packages that were just built: <br/>
+<br/>Finally, be sure to source the workspace in order to use the packages that were just built: <br/>
 
 ```
 source devel/setup.bash
