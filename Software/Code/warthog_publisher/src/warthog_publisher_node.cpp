@@ -4,95 +4,102 @@
 #include "std_msgs/String.h"
 #include "gazebo_msgs/ModelStates.h"
 #include <math.h>
-
+#include <unistd.h>
+ 
 using namespace std;
 
-float position_x = 0;
-float position_y = 0;
-float direction = 0;
+float position_x = 0; //actual x position relative to world frame
+float position_y = 0; //actual y position relative to world frame
+float direction = 0;  //actual yaw relative to world frame 
+bool latch = 0;	      //hold latch value
 
-int gotopoint(float desired_x,float desired_y,float desired_angle, ros::Publisher warthog_pub, int index)
+bool gotopoint(float desired_x,float desired_y,float desired_angle, ros::Publisher warthog_pub)
 {
 	geometry_msgs::Twist msg;//create a msg variable with type geometry_msgs/Twist
 
-	int y_isneg = 1;//desired_x/abs(desired_x);
-	int x_isneg = 1;//desired_y/abs(desired_y);
-
-	if(desired_angle < 0){desired_angle += 2*3.14;}
-	if(direction < 0){direction += 2*3.14;}
-
-	cout << "the index is: " << index << endl;
-	cout << "the des_x is: " << desired_x << endl;
-	cout << "the des_y is: " << desired_y << endl;
-	cout << "the act_x is: " << position_x << endl;
-	cout << "the act_y is: " << position_y << endl;
-	cout << "the des_a is: " << desired_angle << endl;
-	cout << "the act_a is: " << direction << endl;
+	//if the angle is near pi it can switch from negative to positive due to the way atan2() works
+	//to avoid these kinds of scenarios a latch was created to make negative values positive
+	//when the desired angles are near +-pi but normal when they are not
+	//(theta < -3pi/4) turns latch on
+	//(-pi/2 < theta <  3pi/4) turns latch off
+	if(latch == 0 && desired_angle < -3*3.14/4){ latch = 1; }
+	else if(latch == 1 && (desired_angle > -3.14/2 && desired_angle < 3*3.14/4)){ latch = 0; }
+	if(latch == 1 && desired_angle < 0){ desired_angle += 3.14*2; }
+	if(latch == 1 && direction < 0){ direction += 2*3.14; }
 	
-
-	if((desired_angle > direction + 3.14/90) &&
+	//compare angle is desired angle rotated so it is +/- pi for more efficient rotation decisions
+	float compare_angle = desired_angle;
+	if(desired_angle > direction + 3.14){ compare_angle = desired_angle - 2*3.14;}
+	if(desired_angle < direction - 3.14){ compare_angle = desired_angle + 2*3.14;}
+	
+	//see if needs to turn counterclockwise and not in position
+	if((compare_angle > direction + 3.14/90) &&
 	 (((position_x < (desired_x - 0.2))   || 
 	   (position_x > (desired_x + 0.2)))  ||
 	  ((position_y < (desired_y - 0.2))   || 
 	   (position_y > (desired_y + 0.2)))))
 	{
-		cout << "plus angle" << endl;
 		msg.linear.x = 0;
 		msg.angular.z = 0.5;
 	}
-	else if((desired_angle < direction - 3.14/90) &&
+	//see if needs to turn clockwise and not in position
+	else if((compare_angle < direction - 3.14/90) &&
 	      (((position_x < (desired_x - 0.2))  || 
 	        (position_x > (desired_x + 0.2))) ||
 	       ((position_y < (desired_y - 0.2))  || 
 	        (position_y > (desired_y + 0.2)))))
 	{
-		cout << "minus angle" << endl;
 		msg.linear.x = 0;
 		msg.angular.z = -0.5;
 	}
+	//if its not near the point move forward
 	else if((((position_x < (desired_x - 0.2))  || 
 	          (position_x > (desired_x + 0.2))) ||
 	         ((position_y < (desired_y - 0.2))  || 
 	          (position_y > (desired_y + 0.2)))))
 	{
-		cout << "forward" << endl;
-		msg.linear.x = 0.5;
+		msg.linear.x = 2;
 		msg.angular.z = 0;
 	}
+	//stop and return a true meaning the point was reached
 	else
 	{
 		msg.linear.x = 0;
 		msg.angular.z = 0;
-		index++;
+		warthog_pub.publish(msg); //publish msg
+		ros::spinOnce(); //spin ros once each time the loop is run
+		return 1;
 	}	
 
 	warthog_pub.publish(msg); //publish msg
 
 	ros::spinOnce(); //spin ros once each time the loop is run
 	
-	return index;
+	return 0; //return zero means point has not been reached
 }
 
 void modelstatesCallback(gazebo_msgs::ModelStates msg)
 {
 	int index = 0;
-	
-	while(msg.name[index] != "warthog") //find the modelstate with name warthog
+
+	//find the modelstate with name warthog
+	while(msg.name[index] != "warthog") 
 	{
 		index++;
 	}
-
+	//get position values from pose
 	position_x = msg.pose[index].position.x;
 	position_y = msg.pose[index].position.y;
+	//get quaternion values from pose and calculate the direction(yaw)
 	float i = msg.pose[index].orientation.x;
 	float j = msg.pose[index].orientation.y;
 	float k = msg.pose[index].orientation.z;
 	float w = msg.pose[index].orientation.w;
-	direction = atan2(2*(w*k+i*j),1-2*(j*j+k*k));
+	direction = atan2(2*(w*k+i*j),1-2*(j*j+k*k)); 
 
-	//cout << "Position [x,y]: " << endl;
-	//cout << "[" << position_x << "," << position_y << "]" << endl;	
-	//cout << "Yaw: " << direction << endl;
+	//print the current state of the warthog
+	ROS_INFO("\nPosition [x,y]: \n[%.2f,%.2f]\nYaw: %.2f",position_x, position_y,direction);
+
 }
 
 int main(int argc, char **argv)
@@ -109,28 +116,36 @@ int main(int argc, char **argv)
 	//subscribe to gazebo/modelstates
 	ros::Subscriber warthog_sub = nh.subscribe<gazebo_msgs::ModelStates>("gazebo/model_states",1000,modelstatesCallback);
 
+	//place desired waypoint coordinates here
+	float desired_xs[] = {0.5,-20};
+	float desired_ys[] = {-8,-8};
+	//initalize as the first of desired coordinates
+	float desired_x = desired_xs[0];
+	float desired_y = desired_ys[0];
 
-	float desired_xs[4] = {2,2,-2,-2};
-	float desired_ys[4] = {2,-2,-2,2};
-	float desired_x = desired_xs[1];
-	float desired_y = desired_ys[1];
-	float desired_angle = atan2(desired_x,desired_y);
-	int i = 1;
+	int i = 0; //initial array index
 
 	while(ros::ok())
 	{
-		cout << "desx: " << desired_x << endl;
-		cout << "desy: " << desired_y << endl;
+		//calculate angle from warthog to waypoint
 		float desired_angle = atan2(desired_y - position_y,desired_x - position_x);
 		
-		i = gotopoint(desired_x, desired_y, desired_angle, warthog_pub, i);
+		//go to the waypoint, returns true if point has been reached
+		//iterates to next waypoint on true
+		if(gotopoint(desired_x, desired_y, desired_angle, warthog_pub)){i++;}
 		
-		if(i > 3){i = 0;}
+		//notifies the user when the final waypoint has been reached and stops node after 3 seconds
+		if(i >= sizeof(desired_xs)/sizeof(desired_xs[0])){
+		
+			ROS_INFO("Destination has been reached.");
+			sleep(3);
+			return 0;
+		}
+		//set waypoint
 		desired_x = desired_xs[i];
-		desired_y = desired_ys[i];
+		desired_y = desired_ys[i];		
 
-		loop_rate.sleep(); //sleep until at least 1s has passed since last sleep call
-	
+		loop_rate.sleep(); //sleep until at least 1/T loop_rate has passed since last sleep call
 	}
 }
 
