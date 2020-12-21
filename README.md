@@ -60,7 +60,7 @@ The installation process will be discussed in this section to provide some backg
 <br/><br/>  
 </div>
 
-Since the host operating system (OS) for computers utilized were windows, a Linux OS was needed to employ ROS. This team planned to use the Kinetic Kame ROS distribution. The first step was to download the Oracle Virtualbox for free and install onto respective computers. The next step was to download and install Ubuntu 16.04 LTS to use in the Virtualbox environment. For more information on setting up Ubuntu on Virtual box, please refer to the <a href="https://itsfoss.com/install-linux-in-virtualbox/">step by step tutorial</a>. 
+Since the host operating system (OS) for computers utilized were windows, a Linux OS was needed to employ ROS. This team used the Kinetic Kame ROS distribution. The first step was to download the Oracle Virtualbox for free and install onto respective computers. The next step was to download and install Ubuntu 16.04 LTS to use in the Virtualbox environment. For more information on setting up Ubuntu on Virtual box, please refer to the <a href="https://itsfoss.com/install-linux-in-virtualbox/">step by step tutorial</a>. 
 <br/><br/>
 
 <i>2. Kinetic Kame ROS Distro Install</i><br/><br/>
@@ -70,7 +70,7 @@ Since the host operating system (OS) for computers utilized were windows, a Linu
 <br/><br/>
 </div> 
 
-Once Ubuntu 16.04 LTS is successfully configured into the virtual environment, the next step was to install Kinetic Kame ROS distribution. For detailed steps on how to download Kinetic Kame ROS distribution on Ubuntu 16.04 LTS, please refer to the <a href="http://wiki.ros.org/kinetic/Installation/Ubuntu">ROS Kinetic installation guide</a>.
+Once Ubuntu 16.04 LTS was successfully configured into the virtual environment, the Kinetic Kame ROS distribution was installed. For detailed steps on how to download Kinetic Kame ROS distribution on Ubuntu 16.04 LTS, please refer to the <a href="http://wiki.ros.org/kinetic/Installation/Ubuntu">ROS Kinetic installation guide</a>.
 <br/><br/>
 
 Once ROS Kinetic is installed, verify that ROS is installed by opening a new terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd> : to open terminal in Ubuntu) and typing in the following:<br/>
